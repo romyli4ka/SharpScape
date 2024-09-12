@@ -1,0 +1,52 @@
+.views-number {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 400;
+  color: white;
+}
+.forum-container,
+small {
+  color: white;
+}
+.forum-sub-title {
+  color: white;
+  margin-left: 3.2rem;
+}
+.forum-info {
+  text-align: center;
+}
+.forum-icon {
+  float: left;
+  width: 2rem;
+  margin-right: 1.2rem;
+  text-align: center;
+}
+a.forum-item-title {
+  color: #1ab394;
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+a.forum-item-title:hover {
+  color: red;
+}
+.forum-icon .fa {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+  color: white;
+}
+.forum-item.active .fa {
+  color: #1ab394;
+}
+.forum-item.active a.forum-item-title {
+  color: #1ab394;
+}
+@media (max-width: 992px) {
+  .forum-info {
+    margin: 15px 0 10px 0;
+    display: none;
+  }
+  .forum-desc {
+    float: none !important;
+  }
+}

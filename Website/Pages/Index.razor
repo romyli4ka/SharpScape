@@ -1,16 +1,71 @@
 ﻿@page "/"
+@inject IJSRuntime JSRuntime
 <PageTitle>Welcome to SharpScape</PageTitle>
-
-<div class="px-4 pt-5 m-0 text-center border-bottom" style="position: absolute; left: 0; top:0; width: 100%;">
-    <h1 class="display-4 fw-bold my-5">SharpScape</h1>
-    <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">
-        SharpScape is an online multiplayer community.
-        Play and chat with your friends in real-time, or visit the community forums and get engrossed in deep discussions.
-    </p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+<!-- NOTE: the data-bs- attributes added as per the Bootstrap v5.1 instructions -->
+<div class="carouselContainer">
+    <div id="@carouselName" class="carousel slide h-30" data-bs-ride="carousel" data-bs-wrap="true" data-bs-interval="8000" data-bs-pause="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/id/1057/1920/1080" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>SharpScape</h5>
+                <p>SharpScape is an online multiplayer community.
+            Play and chat with your friends in real-time, or visit the community forums and get engrossed in deep discussions.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/id/1067/1920/1080" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Title</h5>
+                <p>body</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>
+<div class="grid-container">
+    <div class="item1 col-lg-6 mx-auto">
+        <h1 class="display-4 fw-bold my-5">SharpScape</h1>
+        <p class="lead mb-4">
+            SharpScape is an online multiplayer community.
+            Play and chat with your friends in real-time, or visit the community forums and get engrossed in deep discussions.
+        </p>
+    </div>
+    <div class="item2"></div>
+    <div class="item3">
+        <a href="/GameWorld">
+            <img href="/GameWorld" src="/images/proto.gif" width="240" />
+        </a>
+    </div>
+    <div class="item4">
+        <p>Walk around and talk with other people in realtime. Talk with strangers, find your friends, or make new ones!</p>
+        <a href="/GameWorld" class="btn btn-primary btn-lg px-4 me-sm-3">Play SharpScape</a>
+    </div>
+    <div class="item5">
+        <a href="forum">
+            <img src="/assets/Index/ForumImage.png" width="300" />
+        </a>
+    </div>
+    <div class="item6">
+        <p>Talk to other people on our forum! Chat about our games, general topics, or whateve is popular! Come in and join the fun!</p>
+        <a href="forum" class="btn btn-outline-secondary btn-lg px-4">Secondary</a>
+    </div>
+    <div class="item7"></div>
+</div>
+@code{
+	const string carouselName = "carouselExampleIndicators"; // NOTE: the ID of the carousel
+
+}
